@@ -48,6 +48,7 @@
                         throw new Error(res.status);
                     }
                     let data = await res.json();
+                    data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
                     data.map(item => {
                         let project = document.createElement('div');
                         var Linguagem = item.language;
@@ -59,7 +60,6 @@
 
                         if (!description) {
                             description = "Sem descrição. Acesse o repositório para saber mais!";
-                            console.log(description);
                         }
 
                         if (Linguagem == "C#") {
