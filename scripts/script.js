@@ -28,9 +28,16 @@ fetch('https://api.github.com/users/JoseLSousa/repos')
             } else if (Linguagem == "TSQL") {
                 CorLinguagem = "orange";
                 iconLinguage = "bi bi-filetype-sql fs-4";
+            } else if(Linguagem == "JavaScript"){
+                CorLinguagem = "Yellow";
+                iconLinguage = "bi bi-filetype-js fs-4";
+
+            }else if(Linguagem == "Java"){
+                CorLinguagem = "#42a4f5"
+                iconLinguage = "bi bi-filetype-java fs-4"
             }
             else {
-                item.language = "";
+                item.language = "Outro";
                 CorLinguagem = "yellow";
                 iconLinguage = "bi bi-file-earmark-x fs-4";
             }
